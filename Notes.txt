@@ -1,0 +1,49 @@
+Q. What is type script 
+TS is a superset of js that adds static typing and other feature to enhance js development.
+It was developed by Microsoft on oct 1, 2012, and is now an open source project with a large community of contributors. 
+-> TS is a superset of JS, which means any valid JS code is also valid TS code.
+
+Note - 
+-> TS catches errors at compile time instead of running, which makes debugging easier and reduces the likelihood of bugs in production.
+-> (Disadvantages) - Browser doesn't support Ts. at the end we have to compile our TS code into js. like SASS ko ham compile karte the CSS me.
+-> For easier to read, write and maintainable code we will use TS.
+
+Installation -
+-> npm install -g typescript
+
+-> TS > tsc --version (typescript compiler) and then enter 
+-> tsc --init (it will give us tsconfig.json file) then noEmitONError : true kar denge iss file me 
+-> tsc index.ts => it will give us index.js file 
+
+-> tsc --noEmitError index.ts (index.ts file me error na hane par hi hamari index.js file banegi else not)
+
+
+// TS Settings
+// VS code > setting > type - typescript inlay hints > sare options ko enable kar development
+// iss setting ko karne se mujhe auto suggestion milega TS data type kar
+
+// Watch Mode for any perticullar file 
+// terminal me type karna hai > tsc index.ts --watch and vo uss index.ts file ko watch karne lag jayega
+
+// Folder structure (ROOTDIR and OUTDIR)
+// 1. i want that .ts ek folder me ho and uske correspondent .js file alag folder me ho 
+// tsconfig.json file me - "outDir": "./dist" and "rootDir": "./src" (.ts file isme rhegi and .js file dist folder me rhegi)
+
+
+// index.html file should be like that
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style src="./css/style.css"></style>
+  </head>
+  <body>
+    <script src="./dist/index.js" type="module"></script>
+  </body>
+</html>
+
+
+// Error - .ts and .js file ko ek sath open rakhte hai to hame error dekhne ko milti hai duplicate var./function and all 
+// solution is that we have to just close the .js file now this error will won't show us again

@@ -1,0 +1,18 @@
+// import React from "react";
+import "./App.css";
+import AddTodo from "./components/AddTodo";
+import Todos from "./components/Todos";
+import Navbar from "./components/navbar";
+
+const App = () => {
+  return (
+    <main>
+      <h1>TODO | REACT + TYPESCRIPT</h1>
+      <AddTodo />
+      <Navbar />
+      <Todos />
+    </main>
+  );
+};
+
+export default App;

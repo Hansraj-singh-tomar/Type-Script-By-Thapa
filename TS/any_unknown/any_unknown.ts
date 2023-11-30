@@ -30,7 +30,7 @@ num2 = true;
 
 // type checking and type safety kar sakte hai using unknown
 if (typeof num2 === "number") {
-  console.log(num2 + 5); // abhi mera num2 = true hai isliye ouput nhi aa rha hai
+  console.log(num2 + 5); // abhi mera num2 = true hai isliye output nhi aa rha hai
 } else {
   console.log("Type is not an number"); // type is not an number
 }
